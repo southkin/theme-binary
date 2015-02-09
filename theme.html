@@ -105,9 +105,9 @@
                 </header>
                 <div class="post-body">
                   <div class="post-content">
-                    <!-- <div data-type-cleanup="true"> -->
+                    <div data-type-cleanup="true">
                       {{ post.content }}
-                    <!-- </div> -->
+                    </div>
                     {% if post.type == 'link' or post.type == 'webclip' %}
                     <span class="post-link-url"><i class="icon-share"></i> <a href="{{ post.url }}" target="_blank">{{ post.url }}</a></span>
                     {% endif %}
@@ -117,6 +117,9 @@
                     {{- post.tags|format_tags(humanize=True) -}}
                   </div>
                   {% endif %}
+                  <div style="padding-top:20px;">
+                    <fb:comments width="100%" href="http://kin-der.postach.io/{{ post.slug }}" numposts="10" colorscheme="light"></fb:comments>
+                  </div>
                 </div>
               </article>
             {% endfor %}
