@@ -26,6 +26,8 @@
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
     })();
     </script>
+    {% endif %}
+    <script type="text/javascript" src="{{ assets('script/jquery2.1.1.js') }}"></script>
     <script>
       window.fbAsyncInit = function() {
         FB.init({
@@ -43,7 +45,22 @@
          fjs.parentNode.insertBefore(js, fjs);
        }(document, 'script', 'facebook-jssdk'));
     </script>
-    {% endif %}
+    <script type="text/javascript" src="http://adimg3.search.naver.net/mobilejs/mobilead_min.js"></script>
+    <script type="text/javascript">
+    $(function(){
+      var cnt = 0;
+      $(".naverAd").each(function(){
+        $(this).attr("id","naverAd"+cnt++);
+      });
+      for (var i = 0 ; i <= cnt ; i++) {
+        new NBP_MOBILEAD({
+          cid: 'mweb_2741125c67604b028bba641639a46c90', 
+          test: false, // 실제 서비스 전 테스트를 원하실 경우 false를 true로 변경해주세요.
+          div_id: 'naverAd'+i // 광고가 삽입될 div를 지정해주세요.
+        });  
+      }
+    });
+    </script>
   </head>
   <body>
 
@@ -117,8 +134,9 @@
                     {{- post.tags|format_tags(humanize=True) -}}
                   </div>
                   {% endif %}
+                  <div class="naverAd"></div>
                   <div style="padding-top:20px;">
-                    <fb:comments width="100%" href="http://kin-der.postach.io/{{ post.slug }}" numposts="10" colorscheme="light"></fb:comments>
+                    <fb:comments width="100%" href="http://kin-der.postach.io/{{ post.slug }}" numposts="5" colorscheme="light"></fb:comments>
                   </div>
                 </div>
               </article>
@@ -200,7 +218,7 @@
               {% else %}
               <section class="comments">
                 <div style="padding-top:20px;">
-                  <fb:comments width="100%" href="http://kin-der.postach.io/{{ post.slug }}" numposts="10" colorscheme="light"></fb:comments>
+                  <fb:comments width="100%" href="http://kin-der.postach.io/{{ post.slug }}" numposts="20" colorscheme="light"></fb:comments>
                 </div>
               </section>
               {% endif %}
