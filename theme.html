@@ -167,8 +167,7 @@
                   {{- post.tags|format_tags(humanize=True) -}}
                 </div>
                 {% endif %}
-                <fb:comments href="http://developers.facebook.com/docs/plugins/comments/" numposts="10" colorscheme="light"></fb:comments>
-                <div class="fb-comments" data-href="{{ post.permalink }}" data-numposts="10" data-colorscheme="light"></div>
+                <fb:comments href="{{ post.permalink }}" numposts="10" colorscheme="light"></fb:comments>
               </section>
               {% if site.disqus %}
               <section class="comments">
