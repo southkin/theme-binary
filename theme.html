@@ -48,7 +48,7 @@
     <script type="text/javascript" src="http://adimg3.search.naver.net/mobilejs/mobilead_min.js"></script>
     <script type="text/javascript">
     $(function(){
-      var mobile = (/iphone|ipad|ipod|android|blackberry|mini|windows\sce|palm/i.test(navigator.userAgent.toLowerCase()));
+      var mobile = navigator.userAgent.match(/iphone|ipad|ipod|android|blackberry|mini|windows\\sce|palm/i);
       if (!mobile) {
         return;
       }
