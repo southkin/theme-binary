@@ -36,6 +36,15 @@
 
     {% else %}
 
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/ko_KR/sdk.js#xfbml=1&appId=759896674088500&version=v2.0";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+
     <div class="container">
       <div class="row">
         <div class="twelve columns">
@@ -158,6 +167,9 @@
                   {{- post.tags|format_tags(humanize=True) -}}
                 </div>
                 {% endif %}
+              </section>
+              <section>
+                <div class="fb-comments" data-href="{{ post.permalink }}" data-numposts="10" data-colorscheme="light"></div>
               </section>
               {% if site.disqus %}
               <section class="comments">
