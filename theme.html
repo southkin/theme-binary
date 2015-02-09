@@ -196,7 +196,9 @@
               </section>
               {% else %}
               <section class="comments">
-                <fb:comments href="http://kin-der.postach.io/{{ post.slug }}" numposts="10" colorscheme="light"></fb:comments>
+                <div style="padding-top:20px;">
+                  <fb:comments href="http://kin-der.postach.io/{{ post.slug }}" numposts="10" colorscheme="light"></fb:comments>
+                </div>
               </section>
               {% endif %}
             </article>
