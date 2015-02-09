@@ -134,12 +134,12 @@
                     {{- post.tags|format_tags(humanize=True) -}}
                   </div>
                   {% endif %}
-                  <div class="naverAd"></div>
                   <div style="padding-top:20px;">
                     <fb:comments width="100%" href="http://kin-der.postach.io/{{ post.slug }}" numposts="5" colorscheme="light"></fb:comments>
                   </div>
                 </div>
               </article>
+              <div class="naverAd"></div>
             {% endfor %}
             </section>
             {% if site.disqus %}
