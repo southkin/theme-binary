@@ -45,6 +45,9 @@
                 <a href="/">{{ site.name }}</a>
               </h1>
             </div>
+            <div class="site-subTitle">
+              <span>친절한 kin의 블로그</span>
+            </div>
             <nav class="site-nav">
               <ul class="nav-menu">
                 <li><a href="/">Home</a></li>
@@ -68,7 +71,7 @@
               <article itemprop="blogPosts" itemscope itemtype="http://schema.org/BlogPosting" class="blog-post feed-item">
                 <header class="post-header">
                   <h2 class="post-title">
-                    <a href="{{ post.permalink }}">[{{ post.title }}]</a>
+                    <a href="{{ post.permalink }}">{{ post.title }}</a>
                   </h2>
                   <div class="post-metadata">
                     <div class="left">
