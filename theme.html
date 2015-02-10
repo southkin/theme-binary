@@ -130,7 +130,7 @@
                   <div class="post-metadata">
                     <div class="left">
                       <!-- <p class="post-byline">Published by {{ site.author }}</p> -->
-                      <p><time datetime="{{ post.created_at }}" class="post-date">{{ post.created_at|date_format }}</time></p>
+                      <p><time datetime="{{ post.created_at }}" class="post-date">{{ post.created_at|date_format }} {{ post.created_at.strftime(%y-%m-%d) }}</time></p>
                     </div>
                     <div class="right">
                       <p class="post-comment-count">
@@ -152,7 +152,6 @@
                   {% if post.tags %}
                   <div class="post-tags">
                     {{- post.tags|format_tags(humanize=True) -}}
-                    {{ post.tags }}
                   </div>
                   {% endif %}
                   <div style="padding-top:20px;">
