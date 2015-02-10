@@ -45,24 +45,39 @@
          fjs.parentNode.insertBefore(js, fjs);
        }(document, 'script', 'facebook-jssdk'));
     </script>
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <script type="text/javascript" src="http://adimg3.search.naver.net/mobilejs/mobilead_min.js"></script>
     <script type="text/javascript">
     $(function(){
+      var dataAdSlot = [
+        "6441620516",
+        "7918353718",
+        "9395086912",
+        "1871820112",
+        "4825286515",
+        "1732219319",
+        "3208952516"
+      ];
       var mobile = navigator.userAgent.match(/iphone|ipad|ipod|android|blackberry|mini|windows\\sce|palm/i);
-      if (!mobile) {
-        return;
-      }
-      var cnt = 0;
-      $(".naverAd").each(function(){
-        $(this).attr("id","naverAd"+cnt++);
+      $(".adWrap").each(function(){
+        if ($(this).hasClass("naverAd") && mobile) {
+          $(this).attr("id","naverAd");
+          new NBP_MOBILEAD({
+            cid: 'mweb_2741125c67604b028bba641639a46c90', 
+            test: false,
+            div_id: 'naverAd'
+          });  
+        }
+        else {
+          $(this).append($("<ins>",{
+            style:"display:block",
+            "data-ad-client":"ca-pub-9432086429976149",
+            "data-ad-format":"auto",
+            "data-ad-slot":dataAdSlot.pop()
+          }));
+        }
       });
-      for (var i = 0 ; i <= cnt ; i++) {
-        new NBP_MOBILEAD({
-          cid: 'mweb_2741125c67604b028bba641639a46c90', 
-          test: false, // 실제 서비스 전 테스트를 원하실 경우 false를 true로 변경해주세요.
-          div_id: 'naverAd'+i // 광고가 삽입될 div를 지정해주세요.
-        });  
-      }
+      (adsbygoogle = window.adsbygoogle || []).push({});
     });
     </script>
   </head>
@@ -106,7 +121,7 @@
             {% if posts %}
             <section itemscope itemtype="http://schema.org/Blog" class="blog-feed">
             {% for post in posts %}
-              <!-- <div class="naverAd"></div> -->
+              <div class="adWrap"></div>
               <article itemprop="blogPosts" itemscope itemtype="http://schema.org/BlogPosting" class="blog-post feed-item">
                 <header class="post-header">
                   <h2 class="post-title">
@@ -239,19 +254,7 @@
 
           {% endif %}
           </div>
-          <div>
-            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-            <!-- banner1 -->
-            <ins class="adsbygoogle"
-                 style="display:block"
-                 data-ad-client="ca-pub-9432086429976149"
-                 data-ad-slot="6441620516"
-                 data-ad-format="auto"></ins>
-            <script>
-            (adsbygoogle = window.adsbygoogle || []).push({});
-            </script>
-          </div>
-          <div class="naverAd"></div>
+          <div class="adWrap naverAd"></div>
           <div class="site-footer">
             <p>All rights Reserved &copy; <a href="/">{{ site.name }}</a>.</p>
             <br />
