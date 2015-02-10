@@ -3239,7 +3239,7 @@ body {
 }
 @media (max-width: 767px) {
   .adWrap {
-    height:100px;
+    height:70px;
     margin-bottom: 1.875rem;
   }
 }
