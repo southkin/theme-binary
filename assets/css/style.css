@@ -3231,7 +3231,13 @@ body {
   line-height: 10pt;
   padding: 7px;
 }
-
-.naverAd {
-  margin-bottom: 20px;
+.adWrap {
+    height:100px;
+    margin-bottom: 1.875rem;
+  }
+@media screen and (max-width: 728px) {
+  .adWrap {
+    height:90px;
+    margin-bottom: 1.875rem;
+  }
 }
