@@ -2742,6 +2742,7 @@ body {
   color: #111111;
   margin-bottom: 30px;
   margin-bottom: 1.875rem;
+  border-bottom:1px solid #f3f0eb;
 }
 .post-body .socialbar-container {
   padding-top: 30px;
