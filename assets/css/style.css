@@ -3233,14 +3233,14 @@ body {
 }
 .adWrap {
     height:90px;
-    margin-bottom: 1.875rem;
+    margin-bottom: 0.9375rem;
   }
 @media screen and (max-width: 728px) {
   .adWrap {
     height:100px;
-    margin-bottom: 1.875rem;
+    margin-bottom: 0.9375rem;
   }
 }
 #naverAd {
-  margin:1.875rem 0px;
+  margin:0.9375rem 0px;
 }
