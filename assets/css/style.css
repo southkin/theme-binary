@@ -8,8 +8,121 @@
  * 2. Prevent iOS text size adjust after orientation change, without disabling
  *    user zoom.
  */
+ @font-face {
+    font-family: AppleGothic;
+    src: local("Apple SD Gothic Neo"),
+    local("Nanum Gothic");
+}
+
+@font-face {
+    font-family: "돋움";
+    src: local("Apple SD Gothic Neo"),
+    local("Nanum Gothic");
+}
+
+@font-face {
+    font-family: "돋움체";
+    src: local("Apple SD Gothic Neo"),
+    local("Nanum Gothic");
+}
+
+@font-face {
+    font-family: dotum;
+    src: local("Apple SD Gothic Neo"),
+    local("Nanum Gothic");
+}
+
+@font-face {
+    font-family: DotumChe;
+    src: local("Apple SD Gothic Neo"),
+    local("Nanum Gothic");
+}
+
+@font-face {
+    font-family: "굴림";
+    src: local("Apple SD Gothic Neo")
+    local("Nanum Gothic");
+}
+
+@font-face {
+    font-family: "굴림체";
+    src: local("Apple SD Gothic Neo")
+    local("Nanum Gothic");
+}
+
+@font-face {
+    font-family: Gulim;
+    src: local("Apple SD Gothic Neo"),
+    local("Nanum Gothic");
+}
+
+@font-face {
+    font-family: GulimChe;
+    src: local("Apple SD Gothic Neo"),
+    local("Nanum Gothic");
+}
+
+@font-face {
+    font-family: "바탕";
+    src: local("Apple SD Gothic Neo")
+    local("Nanum Gothic");
+}
+
+@font-face {
+    font-family: "바탕체";
+    src: local("Apple SD Gothic Neo")
+    local("Nanum Gothic");
+}
+
+@font-face {
+    font-family: Batang;
+    src: local("Apple SD Gothic Neo"),
+    local("Nanum Gothic");
+}
+
+@font-face {
+    font-family: BatangChe;
+    src: local("Apple SD Gothic Neo"),
+    local("Nanum Gothic");
+}
+
+@font-face {
+    font-family: "궁서";
+    src: local("Apple SD Gothic Neo")
+    local("Nanum Gothic");
+}
+
+@font-face {
+    font-family: "궁서체";
+    src: local("Apple SD Gothic Neo"),
+    local("Nanum Gothic");
+}
+
+@font-face {
+    font-family: Gungsuh;
+    src: local("Apple SD Gothic Neo"),
+    local("Nanum Gothic");
+}
+
+@font-face {
+    font-family: MalgunGothic;
+    src: local("Apple SD Gothic Neo"),
+    local("Nanum Gothic");
+}
+
+@font-face {
+    font-family: "Malgun Gothic";
+    src: local("Apple SD Gothic Neo"),
+    local("Nanum Gothic");
+}
+
+@font-face {
+    font-family: "맑은 고딕";
+    src: local("Apple SD Gothic Neo"),
+    local("Nanum Gothic");
+}
 html {
-  font-family: sans-serif;
+  font-family: "Apple SD Gothic Neo";
   /* 1 */
   -ms-text-size-adjust: 100%;
   /* 2 */
