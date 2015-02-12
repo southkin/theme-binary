@@ -122,7 +122,7 @@
     local("Nanum Gothic");
 }
 html {
-  font-family: "Apple SD Gothic Neo";
+  font-family: "Apple SD Gothic Neo" !important;
   /* 1 */
   -ms-text-size-adjust: 100%;
   /* 2 */
